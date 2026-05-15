@@ -37,17 +37,19 @@ document.addEventListener("DOMContentLoaded", () => {
               .map(
                 (participant) => `
                   <li class="participant-item">
-                    <span class="participant-email">${participant}</span>
-                    <button
-                      type="button"
-                      class="participant-delete-button"
-                      data-activity="${name}"
-                      data-email="${participant}"
-                      aria-label="Remove ${participant} from ${name}"
-                      title="Unregister participant"
-                    >
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+                    <div class="participant-row">
+                      <span class="participant-email">${participant}</span>
+                      <button
+                        type="button"
+                        class="participant-delete-button"
+                        data-activity="${name}"
+                        data-email="${participant}"
+                        aria-label="Remove ${participant} from ${name}"
+                        title="Unregister participant"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
                   </li>
                 `
               )
